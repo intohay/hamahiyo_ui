@@ -1,9 +1,9 @@
 import styles from './App.module.css';
-import { Message } from './Message';
-import { Header } from './Header';
+import { Message } from './Message.js';
+import { Header } from './Header.js';
 
 import { useState, useRef } from 'react';
-import html2canvas from 'html2canvas';
+
 
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
     setMessages([]); // メッセージをクリア
 
     const apiUrl = '/api/proxy';
-    
+
     try {
       const response = await fetch(apiUrl, {
         method: 'GET',
