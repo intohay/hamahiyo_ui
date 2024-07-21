@@ -4,7 +4,7 @@ import AbortController from 'abort-controller';
 export default async function handler(req, res) {
     const apiUrl = process.env.REACT_APP_API_URL;
     const controller = new AbortController();
-    const timeout = 15000; // タイムアウトを15秒に設定
+    const timeout = 30000; // タイムアウトを15秒に設定
 
     const timeoutId = setTimeout(() => controller.abort(), timeout);
 
