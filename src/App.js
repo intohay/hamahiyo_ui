@@ -32,7 +32,7 @@ function App() {
       }
 
       const startTaskData = await startTaskResponse.json();
-      const jobId = startTaskData.jobId;
+      const jobId = startTaskData.job_id;
 
       const checkStatus = async (jobId) => {
         const statusResponse = await fetch(`${apiUrl}/task-status/${jobId}`, {
