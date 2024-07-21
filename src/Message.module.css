@@ -1,0 +1,100 @@
+
+.box {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    margin-bottom: 30px;
+}
+
+.icon {
+    width: 40px; /* 画像の幅 */
+    height: 40px; /* 画像の高さ */
+    border-radius: 50%; /* 角丸の半径を50%に設定して円にする */
+    object-fit: cover; /* 画像を円形に収める */
+    margin-left: 15px;
+}
+
+
+.message_box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.name {
+    font-size: 0.7rem;
+    padding: 5px;
+}
+
+
+.message::after { /* または .message::after */
+    content: '';
+    position: absolute;
+    left: -10px; /* 三角形の位置を調整 */
+    top: 8px;
+    border: 10px solid transparent;
+    border-top-color: rgb(246, 246, 246);
+  }
+
+
+
+.message {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    background-color: rgb(246, 246, 246);
+    border-radius: 3px;
+    padding: 15px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* レスポンシブデザイン */
+@media screen and (max-width: 768px) {
+    .message {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        background-color: rgb(246, 246, 246);
+        border-radius: 3px;
+        padding: 15px;
+        box-sizing: border-box;
+        position: relative;
+    }
+    .message_box {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .name {
+        font-size: 0.7rem;
+        padding: 5px;
+    }
+    .icon {
+        width: 40px; /* 画像の幅 */
+        height: 40px; /* 画像の高さ */
+        border-radius: 50%; /* 角丸の半径を50%に設定して円にする */
+        object-fit: cover; /* 画像を円形に収める */
+        margin-left: 15px;
+    }
+    .box {
+        width: 100%;
+        display: flex;
+        justify-content: start;
+        margin-bottom: 30px;
+    }
+}
