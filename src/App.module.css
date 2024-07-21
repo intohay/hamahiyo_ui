@@ -65,11 +65,8 @@
   }
 
   .talk_box {
-    display: flex;
-    flex-direction: column;
-    max-width: 500px;
-    width: 100%;
-    height: 500px; /* 高さを 500px に設定 (任意の値に変更可能) */
-    margin: 0 auto; /* 上下左右の margin を自動で調整し、中央に配置 */
+    /* borderを削除 */
+    border: none;
+    border-bottom: 1px solid #ccc;
   }
 }
