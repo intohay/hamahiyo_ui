@@ -17,7 +17,8 @@ function App() {
     setLoading(true); // ローディング開始
     setMessages([]); // メッセージをクリア
 
-    const apiUrl = process.env.REACT_APP_API_URL;
+    const apiUrl = '/api/proxy';
+    
     try {
       const response = await fetch(apiUrl, {
         method: 'GET',
