@@ -33,7 +33,7 @@ function App() {
 
       const startTaskData = await startTaskResponse.json();
       const jobId = startTaskData.job_id;
-
+      console.log(jobId);
       const checkStatus = async (jobId) => {
         const statusResponse = await fetch(`${apiUrl}/task-status/${jobId}`, {
           method: 'GET',
@@ -54,7 +54,7 @@ function App() {
       do {
         await new Promise(resolve => setTimeout(resolve, 1000));
         taskStatus = await checkStatus(jobId);
-      } while (taskStatus.status !== 'completed');
+      } while (taskStatus.status !== 'finished');
 
       if (taskStatus.result) {
         setMessages(taskStatus.result);
