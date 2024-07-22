@@ -6,6 +6,7 @@
   justify-content: center; /* 水平方向に中央揃え */
   align-items: center; /* 垂直方向に中央揃え */
   width: 100%;
+  background-color: white;
 }
 
 
