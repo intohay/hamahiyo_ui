@@ -31,13 +31,14 @@
 	width: 120px;
   padding: 10px;
 	font-weight: bold;
+  font-size: 1rem;
 	border: 2px solid rgb(94, 190, 227);
 	background: rgb(94, 190, 227);
 	color: #fff;
 	transition: 0.5s;
 }
 
-.button:hover {
+.button:active {
 	color: rgb(94, 190, 227);
 	background: #fff;
 }
