@@ -4,6 +4,7 @@ import { Message } from './Message.js';
 import { Header } from './Header.js';
 
 import { useState, useRef } from 'react';
+import Maintenance from './Maintenance.js';
 
 
 
@@ -12,6 +13,8 @@ function App() {
   const [messages, setMessages] = useState([]);
   const [loading, setLoading] = useState(false);
   
+  const is_maintenance = process.env.REACT_APP_MAINTENANCE_MODE === 'true';
+
 
   const handleGenerateClick = async () => {
 
@@ -102,6 +105,10 @@ function App() {
     ));
   };
 
+
+  if (is_maintenance) {
+    return <Maintenance />;
+  }
   
 
   return (
