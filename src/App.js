@@ -3,7 +3,8 @@ import styles from './App.module.css';
 import { Message } from './Message.js';
 import { Header } from './Header.js';
 
-import { useState, useRef } from 'react';
+
+import { useState, useRef, useEffect } from 'react';
 import Maintenance from './Maintenance.js';
 
 
