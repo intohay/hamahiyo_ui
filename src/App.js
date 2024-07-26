@@ -15,6 +15,16 @@ function App() {
   
   const is_maintenance = process.env.REACT_APP_MAINTENANCE_MODE === 'true';
 
+  useEffect(() => {
+    const savedMessages = localStorage.getItem('messages');
+    if (savedMessages) {
+      setMessages(JSON.parse(savedMessages));
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('messages', JSON.stringify(messages));
+  }, [messages]);
 
   const handleGenerateClick = async () => {
 
