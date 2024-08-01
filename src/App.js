@@ -121,7 +121,7 @@ function App() {
         <div ref={targetRef}>
           <Header />
           {loading ? (
-            <div className={styles.loader}></div> // ローディングスピナーを表示
+            <div className={styles.loader}></div> 
           ) : (
             messages.map((message, index) => (
               <Message key={index} message={renderMessage(message)} />
