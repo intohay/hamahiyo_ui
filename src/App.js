@@ -51,15 +51,8 @@ function App() {
 
       if (startTaskData.message) {
         console.log("Message: ", startTaskData.message);
-        
-        //　改行文字があるか？
-        if (startTaskData.message.includes("\n")) {
-          // 改行文字で分割
-          console.log("yes")
-        } else {
-          console.log("no")
-        }
-        setMessages([startTaskData.message]);
+      
+        setMessages(startTaskData.message.split('[SEP]'));
       } else if (startTaskData.job_id) {
         let jobId = startTaskData.job_id;
 
@@ -93,7 +86,7 @@ function App() {
 
         if (taskStatus.result) {
 
-          setMessages(taskStatus.result);
+          setMessages(taskStatus.result.split('[SEP]'));
         } else {
           console.log("Invalid response format: ", taskStatus);
         }
@@ -127,7 +120,6 @@ function App() {
       <div className={styles.talk_box}>
         <div ref={targetRef}>
           <Header />
-          <Message message="やほー！" />
           {loading ? (
             <div className={styles.loader}></div> // ローディングスピナーを表示
           ) : (
