@@ -51,8 +51,10 @@ function App() {
 
       if (startTaskData.message) {
         console.log("Message: ", startTaskData.message);
-      
-        setMessages(startTaskData.message.split('[SEP]'));
+        let message = startTaskData.message.split('[SEP]');
+        // 空の要素は削除
+        message = message.filter((value) => value !== '');
+        setMessages(message);
       } else if (startTaskData.job_id) {
         let jobId = startTaskData.job_id;
 
