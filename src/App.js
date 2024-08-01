@@ -103,7 +103,7 @@ function App() {
   const renderMessage = (message) => {
     return message.split('\n').map((part, index) => (
       <React.Fragment key={index}>
-        {part}
+        {part.trim()}
         <br />
       </React.Fragment>
     ));
