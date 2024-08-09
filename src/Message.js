@@ -1,6 +1,7 @@
 
 import styles from './Message.module.css';
-import logo from './hiyoko.png';
+// import logo from './hiyoko.png';
+import logo from './hiyoko_with_sunglasses.png';
 import React, { useState } from 'react';
 
 const MessageWithOverlay = ({ message }) => {
