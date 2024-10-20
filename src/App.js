@@ -51,7 +51,7 @@ function App() {
 
       if (startTaskData.message) {
         console.log("Message: ", startTaskData.message);
-        let message = startTaskData.message.split('[SEP]');
+        let message = startTaskData.message.split('\t');
         // 空の要素は削除
         message = message.filter((value) => value !== '');
         setMessages(message);
@@ -88,7 +88,7 @@ function App() {
 
         if (taskStatus.result) {
 
-          setMessages(taskStatus.result.split('[SEP]'));
+          setMessages(taskStatus.result.split('\t'));
         } else {
           console.log("Invalid response format: ", taskStatus);
         }
